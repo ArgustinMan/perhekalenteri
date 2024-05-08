@@ -16,43 +16,43 @@
       <h1>Perhekalenteri</h1>
     </header>
     <section>
-    <div class='form'>
       <form action="kalenteri.php" method="GET" target="_blank">
+        <div class="grid-container">
+          <div class="grid-item">Vuosi:</div>
+          <input type="number" name="year" value="<?php echo date("Y"); ?>"><br>
+          
+          <div class="grid-item">Kuukausi:</div>
+          <select name="month">
+          <?php
+            foreach($months as $key => $value) {
+              echo "<option value='$key'>$value</option>\n";
+            }
+          ?>
+          </select><br>
+          <div class="grid-item">Otsikkofontti:</div>
+          
+          <select name="header">
+          <?php
+            foreach($headerfonts as $key => $value) {
+              echo "<option value='$key'>$value[name]</option>\n";
+            }
+          ?>
+          </select><br>
+          <div class="grid-item">Kuva:</div>
+          
+          <select name="bgimage">
+          <?php
+            foreach ($bgimages as $key => $value) {
+              echo "<option value='$key'>$value[name]</option>\n";
+            }
+          ?>
+          </select><br>
+          <div class="grid-item">Perheenjäsenet:</div>
+          
+          <textarea name="names" rows="5"><?= $defaultnames ?></textarea><br>
 
-        Vuosi: <input type="number" name="year" value="<?php echo date("Y"); ?>"><br>
-
-        Kuukausi:
-        <select name="month">
-        <?php
-          foreach($months as $key => $value) {
-            echo "<option value='$key'>$value</option>\n";
-          }
-        ?>
-        </select><br>
-
-        Otsikkofontti:
-        <select name="header">
-        <?php
-          foreach($headerfonts as $key => $value) {
-            echo "<option value='$key'>$value[name]</option>\n";
-          }
-        ?>
-        </select><br>
-
-        Kuva:
-        <select name="bgimage">
-        <?php
-          foreach ($bgimages as $key => $value) {
-            echo "<option value='$key'>$value[name]</option>\n";
-          }
-        ?>
-        </select><br>
-
-        Perheenjäsenet:
-        <textarea name="names" rows="2"><?= $defaultnames ?></textarea><br>
-
-        <input type="submit" value="Avaa kalenterisivu">
-
+          <input type="submit" value="Avaa kalenterisivu">
+        </div>
       </form>
     </section>
     <footer>
