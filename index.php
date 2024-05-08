@@ -8,13 +8,15 @@
   <head>
     <meta charset="UTF-8">
     <title>Perhekalenteri</title>
+    <link href="styles.css" rel="stylesheet">
   </head>
   <body>
+   <div class='page'>
     <header>
       <h1>Perhekalenteri</h1>
     </header>
     <section>
-
+    <div class='form'>
       <form action="kalenteri.php" method="GET" target="_blank">
 
         Vuosi: <input type="number" name="year" value="<?php echo date("Y"); ?>"><br>
@@ -47,7 +49,7 @@
         </select><br>
 
         Perheenjäsenet:
-        <textarea name="names" rows="5"><?= $defaultnames ?></textarea><br>
+        <textarea name="names" rows="2"><?= $defaultnames ?></textarea><br>
 
         <input type="submit" value="Avaa kalenterisivu">
 
@@ -55,7 +57,7 @@
     </section>
     <footer>
       <hr>
-      <div>perhekalenteri by koodaaja</div>
+      <div>perhekalenteri by Puppet Master</div>
     </footer>
   </body>
 </html>

@@ -1,0 +1,18 @@
+body {
+    background-color: #628a4b;
+    font-family: 'Patrick Hand', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+.page {
+    background-color: #076e75;
+    border-radius: 0.5em;
+    color: #000508;
+    max-width: 30em;
+    min-width: 15em;
+    margin: 0 auto;
+    padding: 1em;
+    }
